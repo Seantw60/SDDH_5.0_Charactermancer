@@ -1,0 +1,141 @@
+/* Core Layout */
+.charactermancer-overlay {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(17, 24, 39, 0.9); /* bg-gray-900 opacity-90 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.wizard-window {
+    background-color: #1f2937; /* bg-gray-800 */
+    border: 4px solid #eab308; /* border-yellow-500 */
+    border-radius: 12px;
+    width: 100%;
+    max-width: 900px;
+    height: 85vh;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.wizard-slide {
+    padding: 2rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+.wizard-slide.title-screen {
+    justify-content: center;
+    align-items: center;
+}
+
+h1, h2, h3 { margin: 0 0 1rem 0; color: #fde047; /* text-yellow-300 */ }
+h1 { font-size: 2.5rem; text-align: center; border-bottom: 2px solid #4b5563; padding-bottom: 1rem; }
+h2 { font-size: 1.8rem; border-bottom: 1px solid #4b5563; padding-bottom: 0.5rem; margin-bottom: 1.5rem; }
+p { color: #d1d5db; /* text-gray-300 */ line-height: 1.5; }
+
+/* Buttons */
+.menu-buttons { display: flex; flex-direction: column; gap: 1rem; width: 300px; margin: 2rem auto; }
+.wizard-footer { margin-top: auto; display: flex; justify-content: space-between; padding-top: 1rem; }
+.actions { display: flex; gap: 1rem; }
+
+.btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    transition: transform 0.1s;
+}
+.btn:active { transform: scale(0.98); }
+.btn:disabled { background-color: #4b5563; cursor: not-allowed; color: #9ca3af; }
+
+.primary { background-color: #ca8a04; color: white; } /* Yellow-ish */
+.secondary { background-color: #2563eb; color: white; } /* Blue */
+.success { background-color: #16a34a; color: white; } /* Green */
+.neutral { background-color: #4b5563; color: white; } /* Gray */
+
+/* Selection Grids (Race/Class/Style) */
+.selection-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+@media (min-width: 768px) { .selection-grid { grid-template-columns: 1fr 1fr; } }
+.selection-grid.three-col { grid-template-columns: repeat(3, 1fr); }
+
+.selection-card {
+    background-color: #374151; /* bg-gray-700 */
+    border: 2px solid #4b5563;
+    border-radius: 8px;
+    padding: 1.5rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.selection-card:hover { background-color: #4b5563; }
+.selection-card.active { border-color: #eab308; background-color: #1f2937; box-shadow: 0 0 0 2px #eab308; }
+
+.card-header { display: flex; align-items: center; gap: 0.5rem; font-weight: bold; font-size: 1.2rem; color: white; margin-bottom: 0.5rem; }
+
+/* Character Select */
+.char-select-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 1rem; }
+.char-card {
+    background-color: #111827; padding: 1rem; border-radius: 8px; border: 1px solid #374151; cursor: pointer;
+}
+.char-card.selected { border-color: #eab308; background-color: #374151; }
+.empty-state { text-align: center; padding: 2rem; color: #9ca3af; border: 2px dashed #4b5563; border-radius: 8px; }
+
+/* Features */
+.features-container { display: grid; gap: 1rem; grid-template-columns: 1fr 1fr; }
+.feature-box { background-color: #374151; padding: 1rem; border-radius: 8px; border-left: 4px solid #eab308; }
+.stat-box { border-left-color: #3b82f6; grid-column: span 2; }
+
+/* Drag and Drop Stats */
+.score-pool { display: flex; justify-content: center; gap: 1rem; margin-bottom: 2rem; padding: 1rem; background: #374151; border-radius: 8px; }
+.draggable-score {
+    width: 50px; height: 50px; background: #2563eb; color: white; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center; font-weight: bold; cursor: grab;
+}
+.stat-drop-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+.stat-drop-target {
+    background: #111827; border: 2px solid #4b5563; border-radius: 8px; padding: 1rem;
+    display: flex; flex-direction: column; align-items: center;
+}
+.score-display {
+    width: 60px; height: 60px; background: #374151; border-radius: 50%; margin-top: 0.5rem;
+    display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: bold;
+}
+.score-display.filled { background: #16a34a; color: white; }
+
+/* Point Buy */
+.point-buy-container { display: flex; flex-direction: column; gap: 0.5rem; max-height: 400px; overflow-y: auto; background: #374151; padding: 1rem; border-radius: 8px; }
+.pb-row { display: flex; justify-content: space-between; align-items: center; padding: 0.5rem; border-bottom: 1px solid #4b5563; }
+.pb-controls { display: flex; align-items: center; gap: 1rem; }
+.pb-btn { width: 30px; height: 30px; border-radius: 50%; border: none; font-weight: bold; cursor: pointer; color: white; }
+.pb-btn.dec { background-color: #dc2626; }
+.pb-btn.inc { background-color: #16a34a; }
+
+/* Random Roll */
+.roll-controls { display: flex; justify-content: center; margin-bottom: 1.5rem; }
+.roll-pool { display: flex; justify-content: center; gap: 1rem; margin-bottom: 1.5rem; }
+.roll-val { background: #dc2626; padding: 0.5rem 1rem; border-radius: 8px; font-weight: bold; }
+.stat-drop-target select { width: 100%; padding: 0.5rem; background: #374151; color: white; border: 1px solid #4b5563; border-radius: 4px; margin-top: 0.5rem; }
+
+/* Final Summary */
+.summary-form { margin-bottom: 2rem; padding: 1rem; background: #111827; border-radius: 8px; }
+.summary-form input { width: 100%; padding: 0.75rem; background: #374151; border: 1px solid #4b5563; color: white; border-radius: 6px; font-size: 1.1rem; margin-top: 0.5rem; }
+.summary-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem; }
+.summary-card { padding: 1rem; background: #374151; border-radius: 8px; border-top: 4px solid; }
+.summary-card.race { border-color: #eab308; }
+.summary-card.class { border-color: #16a34a; }
+.summary-card.stats { border-color: #3b82f6; }
+.summary-card ul { list-style: none; padding: 0; }
+.summary-card li { margin-bottom: 0.5rem; border-bottom: 1px solid #4b5563; padding-bottom: 0.25rem; display: flex; justify-content: space-between; }
