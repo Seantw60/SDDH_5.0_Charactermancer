@@ -277,36 +277,30 @@ const SUB_SPECIES_DATA = {
     },
   },
   Namekian: {
-    'Standard': {
-      name: 'Standard Namekian',
-      description: 'A typical member of Namekian society.',
+    'Dark Namekian': {
+      name: 'Dark Namekian',
+      description: 'These Namekians are hardier than most and are usually demonized in Namekian Society due to their duller colors and lack of distinct Namekian abilities. Dark Namekians have mastered their own regenerative capability, some say they evolved purely to combat the raging discrimination they once faced.',
       features: [
-        { name: 'Spiritual Attunement', description: 'Gain advantage on Wisdom checks.' },
-        { name: 'Regenerative Body', description: 'Regain 1 HP at the start of each turn in combat (min 1 HP).' }
+        { name: 'Demonic Durability', description: 'Increase your Constitution Ability Score by 2.' },
+        { name: 'Hellish Regeneration', description: 'You have access to a pool of Hit Points equal to 2x your Maximum Ki Points. As an Action or Bonus Action on your turn, you may expend any number of Hit Points from this pool to regain that many. This can not raise you above your Hit Point Maximum. Additionally as an Action on your turn, you may expend 10 of these Hit Points to regenerate a limb lost due to the Crippled Condition. The pool refreshes on a Long Rest.' }
       ]
     },
-    'Regenerated': {
-      name: 'Regenerated Namekian',
-      description: 'A Namekian recreated through regeneration, retaining previous memories.',
+    'Dragon Clan': {
+      name: 'Dragon Clan Namekian',
+      description: 'Those attuned to the spirit of Zalama the dragon god. these namekians are spiritually gifted and some even manage to emulate Zalama himself by creating Dragon Balls.',
       features: [
-        { name: 'Ancient Memories', description: 'Gain proficiency in one skill from a previous life.' },
-        { name: 'Reborn Strength', description: '+1 to Constitution modifier (max 20).' }
+        { name: 'Ancient Teachings', description: 'Increase your Intellegence Ability Score and Wisdom Ability Score by 1.' },
+        { name: 'Draconic Blessing', description: 'You have access to a pool of Hit Points equal to your Maximum Ki Points. As an Action on your turn, you may expend any number of Hit Points from this pool to regain that many. This can not raise you above your Hit Point Maximum. Additionally as an Action on your turn, you may expend 20 of these Hit Points to regenerate a limb lost due to the Crippled Condition. The pool refreshes on a Long Rest.' },
+        { name: 'Porungas Touch', description: 'You may touch a willing creature as an Action and expend Hit Points from this pool to restore half as many Hit Points to the Creature. This can not raise them above their Hit Point Maximum.' }
       ]
     },
-    'Pure-Hearted': {
-      name: 'Pure-Hearted Namekian',
-      description: 'A Namekian born with exceptional spiritual purity.',
+    'Warrior Clan': {
+      name: 'Warrior Clan Namekian',
+      description: 'Namekians born for combat that can utilize the monstrous Titan form.',
       features: [
-        { name: 'Pure Spirit', description: 'Advantage on saving throws against mind-affecting effects.' },
-        { name: 'Healing Presence', description: 'Restore 1d6 HP to one ally within 30 feet once per day.' }
-      ]
-    },
-    'Corrupted': {
-      name: 'Corrupted Namekian',
-      description: 'A Namekian influenced by dark or corrupting forces.',
-      features: [
-        { name: 'Dark Power', description: '+1 to damage rolls with dark or corrupted techniques.' },
-        { name: 'Tainted Resilience', description: 'Resistance to necrotic damage.' }
+        { name: 'Stunted Regeneration', description: 'You have access to a pool of Hit Points equal to your Maximum Ki Points. As an Action or Bonus Action on your turn, you may expend any number of Hit Points from this pool to regain that many. This can not raise you above your Hit Point Maximum. Additionally as an Action on your turn, you may expend 30 of these Hit Points to regenerate a limb lost due to the Crippled Condition. The pool refreshes on a Long Rest.' },
+        { name: 'Titan Namekian', description: 'You gain the Titan Namekian Transformation.' },
+        { name: 'Warriors Frame', description: 'Increase your Dexterity Ability Score and Strength Ability Score by 1. This cannot raise you over your Ability Score Maximum.' }
       ]
     }
   },
@@ -506,8 +500,8 @@ const SUB_SPECIES_DATA = {
       name: 'Otherworld Exile',
       description: 'There was once a group of Demon Realm Denizens, sometimes known as Ogres, that had attempted to stage a coup against an ancient Supreme Demon King and found themselves banished to Otherworld to remain in HFIL as its protectors or as assisstants to the powers that be.',
       features: [
-        { name: 'Survival Instinct', description: 'You refuse to let the cruel world around you take you down! At 1st Level, you gain the Survivor Heroic Feat.'},
-        { name: 'Quick Thinking', description: 'You have learned to be quick on your feet and even quicker with your thoughts. A number of times per Long Rest equal to your Ki Rank you may add your Intelligence Modifier or Wisdom Modifier to a Skill Check, even if the Skill Check would already use that Ability Score Modifier.' }
+        { name: 'Bloody Instincts', description: 'Your deeply seated instincts for battle are not gone, meerly suppressed. Whenever you roll Initiative, you may choose to gain the Enraged Condition for a number of rounds equal to your Ki Rank. At the end of this duration, you gain 1 Rank of Exhaustion.'},
+        { name: 'HFIL Horns', description: 'Choose one of the following to gain the benefits of: One Horn. You possess a singular horn in the center of your head, only large enough to act as a sensory organ. At 1st Level, you gain Proficiency in the Perception Skill. This grants you Expertise if you would gain Proficiency from another source. Two Horns. You possess a set of matching horns, each extending off the side of your head that grants you the intimidating visage of a demon. At 1st Level, you gain Proficiency in the Intimidation Skill. This grants you Expertise if you would gain Proficiency from another source.' }
       ]
     }
 
