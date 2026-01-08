@@ -554,7 +554,7 @@ const DatabaseService = (() => {
 
 const TitleScreen = ({ onStartCreation, onSelectCharacter }) => (
     <div className="wizard-slide title-screen">
-        <h1>D&D Ball Z Manager</h1>
+        <h1>SDDH 5.0 Charactermancer</h1>
         <div className="menu-buttons">
             <button className="btn primary" onClick={onStartCreation}>Create Character</button>
             <button className="btn secondary" onClick={onSelectCharacter}>Select Character</button>
