@@ -1,4 +1,4 @@
-# D20CC - Homebrew D&D 5.0 Character Creation Tool
+# SDDH 5.0 Charactermancer - Homebrew D&D 5.0 Character Creation Tool
 
 A comprehensive web application for creating and managing characters for the Homebrew D&D 5.0 (HB-5.0) tabletop RPG system. Built with React and Vite, this tool provides an intuitive multi-step wizard for character generation with 16 playable species, biological variants (Sub-Species), heritage options, and detailed stat management.
 
